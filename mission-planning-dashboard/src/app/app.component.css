@@ -1,4 +1,6 @@
 .box {
-    display: flex;
+    display: inline-flex;
     padding: 10px;
+    border-radius: 10px;
+    border-style: dotted;
 }
