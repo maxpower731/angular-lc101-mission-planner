@@ -35,6 +35,11 @@ export class EquipmentComponent implements OnInit {
      return false;
    }
 
+   removeItem(equipment: {name, mass}): void{
+      this.cargoHold.splice(this.cargoHold.indexOf(equipment), 1);
+      this.cargoMass-=equipment.mass;
+   }
+
    emptyHold(){
      this.cargoMass=0;
      this.cargoHold=[];
@@ -42,6 +47,20 @@ export class EquipmentComponent implements OnInit {
 
    calculateRemainingMass(): number{
     return this.maximumAllowedMass - this.cargoMass;
+   }
+
+   itemCount(equipment: {name, mass}, num:number): boolean {
+    let count:number = 0;
+    for (let i = 0; i < this.cargoHold.length; i++) {
+      if (equipment.name === this.cargoHold[i]["name"]) {
+        count++;
+      }
+    }
+    if (count === num) {
+      return true;
+    } else {
+      return false;
+    }
    }
 
    // Code your addItem function here:

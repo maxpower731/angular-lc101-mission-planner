@@ -11,4 +11,8 @@
         <li (mouseover)="mousey=astronaut" (mouseout)="mousey=false" *ngFor="let astronaut of crew">{{astronaut.name}}</li>
     </ol>
     <img *ngIf="mousey" [src]="mousey.photo"/>
+    <hr>
+    <div>
+        <p>Other astronaut data.</p>
+    </div>
 </div>

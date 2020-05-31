@@ -1,7 +1,16 @@
 <div class="displayBox">
     <h3>Possible Experiments</h3>
-    <ul>
-      <li *ngFor="let experiment of experiments">{{experiment}}</li>
-    </ul>
-</div>
+    <ol>
+      <li *ngFor="let experiment of experiments" [class.selected]="chosenExperiments.includes(experiment)">
+        <span><button (click)="addExperiment(experiment)" class="addButton">Add</button></span> {{experiment}}</li>
+    </ol>
+  </div>
 <hr>
+<div class="displayBox">
+  <h3>Chosen Experiments</h3>
+  <ol>
+    <li *ngFor="let experiment of chosenExperiments">{{experiment}}</li>
+</ol>
+<button *ngIf='chosenExperiments.length > 0' (click)='clearExperiments()' >Clear Experiments</button>
+</div>
+

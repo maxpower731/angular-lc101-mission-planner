@@ -6,3 +6,15 @@
 h3 {
     text-align: center;
 }
+
+.selected{
+    color: green;
+}
+
+.addButton {
+    margin: 2px;
+    cursor: pointer;
+    color: red;
+    background-color: orange;
+}
+

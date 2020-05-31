@@ -16,9 +16,9 @@ h3 {
 .active {
     background-color: goldenrod;
 }
-.notactive{
+/* .notactive{
     background-color: none;
-}
+} */
 
 /* Add the 'nearMaxMass' class style here: */
  .nearMaxMass{
