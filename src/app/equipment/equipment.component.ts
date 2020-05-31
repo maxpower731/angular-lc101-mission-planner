@@ -40,6 +40,10 @@ export class EquipmentComponent implements OnInit {
      this.cargoHold=[];
    }
 
+   calculateRemainingMass(): number{
+    return this.maximumAllowedMass - this.cargoMass;
+   }
+
    // Code your addItem function here:
-   
+
 }
